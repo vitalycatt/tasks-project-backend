@@ -1,12 +1,12 @@
 import { Router } from "express";
-import PostController from "./PostController.js";
+import TaskController from "./TaskController.js";
 
 const router = new Router();
 
-router.post("/posts", PostController.create);
-router.get("/posts", PostController.getAll);
-router.get("/posts/:id", PostController.getOne);
-router.put("/posts", PostController.update);
-router.delete("/posts/:id", PostController.delete);
+router.post("/tasks", TaskController.create);
+router.get("/tasks", TaskController.getAll);
+router.get("/tasks/:id", TaskController.getOne);
+router.put("/tasks", TaskController.update);
+router.delete("/tasks/:id", TaskController.delete);
 
 export default router;
