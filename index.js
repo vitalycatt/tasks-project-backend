@@ -1,7 +1,7 @@
 import cors from "cors";
+import router from "./router.js";
 import express from "express";
 import mongoose from "mongoose";
-import router from "./router.js";
 import fileUpload from "express-fileupload";
 
 const PORT = 5050;
@@ -11,8 +11,7 @@ const DB_URL =
 const app = express();
 
 const corsOrigin = {
-  // FRONTEND PORT
-  origin: "http://localhost:3000",
+  origin: "*",
   credentials: true,
   optionSuccessStatus: 200,
 };
